@@ -11,17 +11,6 @@ $(document).keypress(function() {
         nextSequence();
         started = true;
     }
-    else {
-    var userChosenColor = this.id;
-    userClickedPattern.push(userChosenColor);
-
-
-    playsound(userChosenColor);
-    animatePress(userChosenColor);      
-
-    checkAnswer(userClickedPattern.length - 1);
-    }
-
 });
 
 $(".btn").click(function() {
