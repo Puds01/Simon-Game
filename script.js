@@ -24,6 +24,16 @@ $(document).keypress(function() {
 
 });
 
+$(".btn").click(function() {
+        var userChosenColor = this.id;
+        userClickedPattern.push(userChosenColor);
+
+        playsound(userChosenColor);
+        animatePress(userChosenColor);      
+
+        checkAnswer(userClickedPattern.length - 1);
+});
+
 function startOver() {
     level = 0;
     gamePattern = [];
