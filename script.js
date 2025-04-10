@@ -5,11 +5,12 @@ var level = 0;
 var started = false;
 
 
-$("#level-title").click(function() {
+$("#play").click(function() {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
+        $("#play").hide();
     }
 });
 
@@ -27,6 +28,14 @@ function startOver() {
     level = 0;
     gamePattern = [];
     started = false;
+
+    $(".btn").on("click touchstart", function () {
+        var userChosenColor = this.id;
+        userClickedPattern.push(userChosenColor);
+        playsound(userChosenColor);
+        animatePress(userChosenColor);      
+        checkAnswer(userClickedPattern.length - 1);
+    });
 }
 
 
@@ -36,14 +45,28 @@ function checkAnswer(currentLevel) {
         console.log("Success");
 
         if (userClickedPattern.length === gamePattern.length) {
+
+            $(".btn").off("click touchstart");
+
             setTimeout(function() {
                 nextSequence();
+
+                $(".btn").on("click touchstart", function () {
+                    var userChosenColor = this.id;
+                    userClickedPattern.push(userChosenColor);
+                    playsound(userChosenColor);
+                    animatePress(userChosenColor);      
+                    checkAnswer(userClickedPattern.length - 1);
+                });
+
             }, 1000);
         }
     }
 
     else {
-        console.log("Wrong");
+        
+        $(".btn").off("click touchstart");
+
         playsound("wrong");
         $("body").addClass("game-over");
 
@@ -51,8 +74,10 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 200);
 
-        $("#level-title").text("Game over, Click here to restart");
+        $("#level-title").text("Game over!");
 
+        $("#play").show();
+        $(".h1").text("Retry"); 
         startOver();
     }
 
@@ -63,6 +88,7 @@ function nextSequence() {
     var randomNumber = Math.floor(Math.random() * 4);
 
     var randomChosenColor = buttonColors[randomNumber];
+    
 
     gamePattern.push(randomChosenColor);
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
@@ -74,6 +100,8 @@ function nextSequence() {
     $("#level-title").text("Level " + level);
 
     userClickedPattern = [];
+
+    
     
 }
 

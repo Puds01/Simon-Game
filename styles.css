@@ -3,6 +3,11 @@ body {
   background-color: #011F3F;
 }
 
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 60px;
+}
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
@@ -47,7 +52,49 @@ body {
   background-color: yellow;
 }
 
+.play {
+  background-color: #FEF2BF;
+  margin: 25px;
+  margin-top: 50px;
+  height: 150px;
+  width: 500px;
+  display: inline-block;
+  border: 10px solid black;
+  align-self: center;
+  border-radius: 10px;
+}
+
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media (max-width: 1200px){
+  h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+  }
+  #level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin:  5%;
+    color: #FEF2BF;
+  }
+  .container {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  .btn {
+    height: 150px;
+    width: 150px;
+  }
+  .play {
+    height: 100px;
+    width: 400px;
+    margin-right: 20px;
+  }
+  .h1 {
+    font-size: 40px;
+  }
 }
