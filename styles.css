@@ -70,13 +70,12 @@ h1 {
 }
 
 @media (max-width: 1200px){
-  h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
+  body {
+    margin-top: 30%;
   }
   #level-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
+    font-size: 50px;
     margin:  5%;
     color: #FEF2BF;
   }
@@ -86,16 +85,16 @@ h1 {
     margin: auto;
   }
   .btn {
-    margin: 12px;
-    height: 130px;
-    width: 130px;
+    margin: 30px;
+    height: 250px;
+    width: 250px;
   }
   .play {
-    height: 100px;
-    width: 300px;
+    height: 150px;
+    width: 350px;
     margin-right: 20px;
   }
   .h1 {
-    font-size: 40px;
+    font-size: 65px;
   }
 }
