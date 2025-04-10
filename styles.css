@@ -69,7 +69,7 @@ h1 {
   background-color: grey;
 }
 
-@media (max-width: 600px){
+@media (max-width: 1200px){
   h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 30px;
