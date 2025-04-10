@@ -1,7 +1,6 @@
 body {
   text-align: center;
   background-color: #011F3F;
-  margin-top: 30%;
 }
 
 h1 {
@@ -11,7 +10,7 @@ h1 {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 50px;
+  font-size: 3rem;
   margin:  5%;
   color: #FEF2BF;
 }
@@ -20,13 +19,14 @@ h1 {
   display: block;
   width: 100%;
   margin: auto;
+
 }
 
 .btn {
-  margin: 30px;
+  margin: 25px;
   display: inline-block;
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -54,11 +54,13 @@ h1 {
 
 .play {
   background-color: #FEF2BF;
-  margin-top: 70px;
+  margin: 25px;
+  margin-top: 50px;
   height: 150px;
-  width: 350px;
+  width: 500px;
   display: inline-block;
   border: 10px solid black;
+  align-self: center;
   border-radius: 10px;
 }
 
@@ -67,26 +69,44 @@ h1 {
   background-color: grey;
 }
 
-@media only screen and (min-device-width: 435px) {
+@media (max-device-width: 425px){
   body {
-    margin: 0px;
+    margin-top: 20%;
   }
   #level-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
+    font-size: 50px;
     margin:  5%;
     color: #FEF2BF;
   }
-
   .btn {
-    margin: 25px;
-    height: 200px;
-    width: 200px;
+    margin: 30px;
+    height: 250px;
+    width: 250px;
   }
   .play {
-    margin-top: 20px;
     height: 150px;
-    width: 400px;
+    width: 600px;
+    margin-right: 20px;
+  }
+  .h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-device-width: 320px){
+  body {
+    margin-top: 30%;
+  }
+  .btn {
+    margin: 40px;
+    height: 300px;
+    width: 300px;
+  }
+  .play {
+    height: 150px;
+    width: 600px;
+    margin-right: 20px;
   }
   .h1 {
     font-size: 60px;
