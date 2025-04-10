@@ -1,6 +1,7 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  margin-top: 30%;
 }
 
 h1 {
@@ -10,23 +11,22 @@ h1 {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
+  font-size: 50px;
   margin:  5%;
   color: #FEF2BF;
 }
 
 .container {
   display: block;
-  width: 50%;
+  width: 100%;
   margin: auto;
-
 }
 
 .btn {
-  margin: 25px;
+  margin: 30px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -54,13 +54,11 @@ h1 {
 
 .play {
   background-color: #FEF2BF;
-  margin: 25px;
-  margin-top: 50px;
+  margin-top: 70px;
   height: 150px;
-  width: 500px;
+  width: 350px;
   display: inline-block;
   border: 10px solid black;
-  align-self: center;
   border-radius: 10px;
 }
 
@@ -69,30 +67,26 @@ h1 {
   background-color: grey;
 }
 
-@media (max-width: 1200px){
+@media only screen and (min-device-width: 435px) {
   body {
-    margin-top: 30%;
+    margin: 0px;
   }
   #level-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 50px;
+    font-size: 3rem;
     margin:  5%;
     color: #FEF2BF;
   }
-  .container {
-    display: block;
-    width: 100%;
-    margin: auto;
-  }
+
   .btn {
-    margin: 30px;
-    height: 250px;
-    width: 250px;
+    margin: 25px;
+    height: 200px;
+    width: 200px;
   }
   .play {
+    margin-top: 20px;
     height: 150px;
-    width: 350px;
-    margin-right: 20px;
+    width: 400px;
   }
   .h1 {
     font-size: 60px;
