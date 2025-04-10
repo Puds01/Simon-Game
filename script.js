@@ -29,7 +29,7 @@ function startOver() {
     gamePattern = [];
     started = false;
 
-    $(".btn").on("click touchstart", function () {
+    $(".btn").on("click", function () {
         var userChosenColor = this.id;
         userClickedPattern.push(userChosenColor);
         playsound(userChosenColor);
@@ -46,12 +46,12 @@ function checkAnswer(currentLevel) {
 
         if (userClickedPattern.length === gamePattern.length) {
 
-            $(".btn").off("click touchstart");
+            $(".btn").off("click");
 
             setTimeout(function() {
                 nextSequence();
 
-                $(".btn").on("click touchstart", function () {
+                $(".btn").on("click", function () {
                     var userChosenColor = this.id;
                     userClickedPattern.push(userChosenColor);
                     playsound(userChosenColor);
@@ -65,7 +65,7 @@ function checkAnswer(currentLevel) {
 
     else {
         
-        $(".btn").off("click touchstart");
+        $(".btn").off("click");
 
         playsound("wrong");
         $("body").addClass("game-over");
