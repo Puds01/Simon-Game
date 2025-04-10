@@ -5,7 +5,7 @@ var level = 0;
 var started = false;
 
 
-$(document).keypress(function() {
+$("#level-title").click(function() {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
@@ -51,7 +51,7 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 200);
 
-        $("#level-title").text("Game over, Press Any Key To Restart");
+        $("#level-title").text("Game over, Click here to restart");
 
         startOver();
     }
